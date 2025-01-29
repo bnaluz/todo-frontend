@@ -24,7 +24,6 @@ const TaskCard: React.FC<TaskCardProps> = ({
   return (
     <div className="w-[736px] h-[72px] bg-[#262626] rounded-lg border border-[#333333] p-4 shadow-md flex items-center justify-between">
       <div className="flex items-center gap-3">
-        {/* Clickable Circle for Toggling Completion */}
         <button
           onClick={() => onToggle(id)}
           className={`w-5 h-5 rounded-full flex items-center justify-center transition-colors duration-300 ${
@@ -34,7 +33,6 @@ const TaskCard: React.FC<TaskCardProps> = ({
           {completed && <FaCheck size={12} />}
         </button>
 
-        {/* Task Title */}
         <span
           className={`text-sm ${
             completed ? 'line-through text-[#808080]' : 'text-[#F2F2F2]'
@@ -44,7 +42,6 @@ const TaskCard: React.FC<TaskCardProps> = ({
         </span>
       </div>
 
-      {/* Delete Button */}
       <button
         onClick={() => onDelete(id)}
         className="text-[#808080] hover:text-[#F2F2F2]"
